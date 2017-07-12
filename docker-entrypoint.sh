@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+exec "mongod"
+
 # Setup mongodb-mms-agent
 if [ ! "$MMS_API_KEY" ] || [ ! "$MMS_GROUP_ID" ]; then
     {
