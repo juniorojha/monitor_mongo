@@ -25,6 +25,9 @@ ADD munin/munin-node.conf /etc/munin/munin-node.conf
 # Add supervisord conf
 ADD supervisor /etc/supervisor
 
+# EXPOSE PORT
+EXPOSE 27017
+
 # Add entrypoint
 ADD docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
